@@ -3,7 +3,7 @@
 This is a section of building prototype decentralized stablecoin.
 
 [DSCEngine Example](https://sepolia.etherscan.io/address/0x249d8F8098Da6cF592783a3A76A08f4475E1094E#code)
-[Decentralized Stablecoin Example](https://sepolia.etherscan.io/address/0x249d8f8098da6cf592783a3a76a08f4475e1094e)
+[Decentralized Stablecoin Example](https://sepolia.etherscan.io/address/0x83d3ff0b39c4a9e5050901c2e8a7163746aac698#code)
 
 # About
 
@@ -49,11 +49,6 @@ cd foundry-defi-stablecoin-cu
 forge build
 ```
 
-### Optional Gitpod
-
-If you can't or don't want to run and install locally, you can work with this repo in Gitpod. If you do this, you can skip the `clone this repo` part.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/PatrickAlphaC/foundry-smart-contract-lottery-cu)
 
 # Updates
 
@@ -143,13 +138,15 @@ cast send 0xdd13E55209Fd76AfE204dBda4007C227904f0a81 "deposit()" --value 0.1ethe
 2. Approve the WETH
 
 ```
-cast send 0xdd13E55209Fd76AfE204dBda4007C227904f0a81 "approve(address,uint256)" 0x091EA0838eBD5b7ddA2F2A641B068d6D59639b98 1000000000000000000 --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY
+cast send 0xdd13E55209Fd76AfE204dBda4007C227904f0a81 "approve(address,uint256)" 0x249d8F8098Da6cF592783a3A76A08f4475E1094E 1000000000000000000 --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY
+
 ```
 
 3. Deposit and Mint DSC
 
 ```
-cast send 0x091EA0838eBD5b7ddA2F2A641B068d6D59639b98 "depositCollateralAndMintDsc(address,uint256,uint256)" 0xdd13E55209Fd76AfE204dBda4007C227904f0a81 100000000000000000 10000000000000000 --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY
+cast send 0x249d8F8098Da6cF592783a3A76A08f4475E1094E "depositCollateralAndMintDsc(address,uint256,uint256)" 0xdd13E55209Fd76AfE204dBda4007C227904f0a81 100000000000000000 10000000000000000 --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY
+
 ```
 
 ## Estimate gas
